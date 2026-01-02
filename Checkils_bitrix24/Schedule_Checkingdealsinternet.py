@@ -2,13 +2,15 @@
 # Каждый час и полчаса
 # Запускает проверку стадии успешной в Битрикс 24 на наличие сделок без накладной и возвращает сделку на стадию "получена оплата"
 
-import requests
-from datetime import datetime, timedelta
-import creds # Импорт файла с конфигурацией
-import schedule
-import time
-from loguru import logger # Импортируем loguru для логирования
 import os
+import time
+from datetime import datetime, timedelta
+
+import requests
+import schedule
+from loguru import logger
+
+import creds  # Импорт файла с конфигурацией
 
 # Создаем папку для логов, если она не существует
 log_folder = "logs"
