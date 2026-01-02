@@ -2,11 +2,13 @@
 # Программа ручной проверки Интернет сделок которые ушли в Успешные
 # Проверяет наличие файла 1С Накладная и если файла нет возвращает сделку на стадию получена оплата
 
-import requests
-from datetime import datetime, timedelta
-import creds # Импорт файла с конфигурацией
-from loguru import logger
 import os
+from datetime import datetime, timedelta
+
+import requests
+from loguru import logger
+
+import creds  # Импорт файла с конфигурацией
 
 # Создаем папку для логов, если она не существует
 log_folder = "logs"
